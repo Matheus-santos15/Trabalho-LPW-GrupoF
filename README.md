@@ -8,3 +8,6 @@ irá permitir a criação de posts, enquetes, comentários e etc.
 2. Matheus Filipe Alves dos Santos
 3. Julia Oliveira Martins
 4. Gabrielle Cristina Tenorio Alves dos Santos
+
+# Orientador
+William Sallum
