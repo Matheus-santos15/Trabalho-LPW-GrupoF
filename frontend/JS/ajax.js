@@ -63,7 +63,28 @@ formCadastro.on('submit', function(f) {
         success: function(sucesso) {
             console.log(sucesso)
 
-             window.location.href = 'http://127.0.0.1:5500/Trabalho-LPW-GrupoF/index.html'
+            loginDados = {
+                email: dados.email,
+                senha: dados.senha
+            }
+
+            $.ajax({
+                type: 'POST',
+                url: 'http://127.0.0.1:5000/auth/login',
+                data: JSON.stringify(dados),
+                contentType: 'application/json; charset=utf-8',
+
+                success: function(resposta) {
+                    localStorage.setItem('acess_token', resposta.acess_token)
+                    localStorage.setItem('refresh_token', resposta.refresh_token)
+
+                    window.location.href = 'http://127.0.0.1:5500/Trabalho-LPW-GrupoF/index.html'
+                },
+
+                error: function(erro) {
+                    alert('Erro no login automático! Status: ' + erro.status)
+                }
+            })
         },
 
         error: function(erro) {
