@@ -1,1 +1,1 @@
-$(document).ready(verificarLogin())
+$(document).ready(verificarLogin()) // Verifica se o usuário está logado ao carregar a página
