@@ -34,18 +34,20 @@ class Usuario(Base):
         self.seguidores_contagem = seguidores_contagem
         
 class Comentario(Base):
-    __tablename__ = "postagens"
+    __tablename__ = "comentarios"
     
     id = Column("id", Integer, primary_key=True, autoincrement=True)
     usuario_id = Column("usuario_id", Integer, ForeignKey("usuarios.id"), nullable=False)
     titulo = Column("titulo", String(500), nullable=True)
+    midia = Column("midia", String(500))
     conteudo = Column("conteudo", Text, nullable=False)
     criado_em = Column("criado_em", DateTime, server_default=func.now())
     
-    def __init__(self, usuario_id, titulo, conteudo, criado_em=func.now()):
+    def __init__(self, usuario_id, titulo, conteudo, midia, criado_em=func.now()):
         self.usuario_id = usuario_id
         self.titulo = titulo
         self.conteudo = conteudo
+        self.midia = midia
         self.criado_em = criado_em
         
 class Enquete(Base):
@@ -55,13 +57,15 @@ class Enquete(Base):
     nome = Column("nome", String(100), nullable=False, unique=True)
     titulo = Column("titulo", String(200), nullable=True)
     conteudo = Column("conteudo", Text, nullable=False)
+    midia = Column("midia", String(500))
     criado_em = Column("criado_em", DateTime, server_default=func.now())
     opcoes = relationship("Opcoes", back_populates="enquete", cascade="all, delete-orphan")
     
-    def __init__(self, nome, titulo, conteudo, criado_em=func.now()):
+    def __init__(self, nome, titulo, conteudo, midia, criado_em=func.now()):
         self.nome = nome
         self.titulo = titulo
         self.conteudo = conteudo
+        self.midia = midia
         self.criado_em = criado_em
 
 class Opcoes(Base):

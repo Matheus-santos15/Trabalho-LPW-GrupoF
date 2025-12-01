@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-stone-950 h-[100vh] flex items-center">
+    <div class="w-125 h-75 bg-stone-900 rounded-xl m-auto space-y-4 relative">
+        <div id="cortina-login" class="transition-all w-50 h-75 float-right bg-linear-to-r from-purple-700 to-pink-500 flex flex-col items-center justify-around rounded-tl-xl rounded-bl-xl ease-in-out duration-500">
+            <h1 class="text-white text-[30px] p-[10px]">Já tem uma conta?</h1>
+            <button id="opcao-login" class="block text-white text-[20px] bg-purple-950 px-4 rounded-sm">Fazer log-in</button>
+        </div>
+        <h1 id="titulo-cadastro" class="text-white ml-5 mt-5 text-xl font-bold float-left">Registre-se agora</h1>
+        <form action="" id="form-cadastro" class="space-y-4 float-left">
+            <label class="text-white ml-8 block">Nome: <input id="input-nome" type="text" class="text-black bg-white border-[3px] border-stone-900 focus:shadow-none focus:outline-none focus:border-stone-600"></label>
+            <label class="text-white ml-8 block">E-mail: <input id="input-email" type="email" class="text-black bg-white border-stone-900 border-[3px] focus:shadow-none focus: outline-none focus:border-stone-600"></label>
+            <label class="text-white ml-8 block">Senha: <input id="input-senha" type="password" maxlength="500" class="text-black bg-white border-stone-900 border-[3px] focus:shadow-none focus: outline-none focus:border-stone-600"></label>
+            <button class="text-white ml-8 block border-[1px] px-5 rounded-[4px]">Enviar</button>
+        </form>
+        <h1 id="titulo-login" class="text-white right-27 hidden top-5 text-xl font-bold float-right absolute">Faça log-in agora</h1>
+        <form action="" id="form-login" class="space-y-4 hidden right-5 absolute float-right top-15">
+            <label class="text-white ml-8 block">E-mail: <input id="email-login" type="email" class="text-black bg-white border-stone-900 border-[3px] focus:shadow-none focus: outline-none focus:border-stone-600"></label>
+            <label class="text-white ml-8 block">Senha: <input id="senha-login" type="password" maxlength="500" class="text-black bg-white border-stone-900 border-[3px] focus:shadow-none focus: outline-none focus:border-stone-600"></label>
+            <p id="error-message" class="ml-8 text-white bg-red-800 px-4 rounded-sm"></p>
+            <button type="submit" class="text-white ml-8 block border-[1px] px-5 rounded-[4px]">Enviar</button>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="frontend/JS/login-registrar.js"></script>
+    <script src="frontend/JS/ajax.js"></script>
+</body>
+</html>
