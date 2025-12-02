@@ -26,9 +26,11 @@ bearer_scheme = HTTPBearer()
 
 from auth_routes import auth_router
 from posts_routes import posts_router
+from social_routes import social_router
 
 app.include_router(auth_router)
 app.include_router(posts_router)
+app.include_router(social_router)
 
 @app.get("/")
 async def root():

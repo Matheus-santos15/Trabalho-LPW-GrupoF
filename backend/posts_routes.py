@@ -9,7 +9,7 @@ posts_router = APIRouter(prefix="/posts", tags=["posts"])
 @posts_router.post("/comentario")
 async def criar_comentario(comentarioModelo: ComentarioSchema, sessao: Session = Depends(pegar_sessao)):
     novoComentario = Comentario(
-        usuario_id = comentarioModelo.usuario_id,  # Substituir pelo id do usuário autenticado
+        usuario_id = comentarioModelo.usuario_id,
         titulo=comentarioModelo.titulo,
         conteudo=comentarioModelo.conteudo,
         midia=comentarioModelo.midia
