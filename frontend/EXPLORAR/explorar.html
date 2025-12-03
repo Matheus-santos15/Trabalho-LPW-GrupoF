@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar - Social</title>
+    
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="explorar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav id="navegacao">
+            <ul id="menu-superior">
+                <li>
+                    <a href="../PERFIL/perfil.html">
+                        <span class="abas-menu">Perfil</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../PAGINA-INICIAL/pagina-inicial.html">
+                        <span class="abas-menu">Página Inicial</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="explorar.html" class="ativo"> <span class="abas-menu">Explorar</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../EM-ALTA/em-alta.html">
+                        <span class="abas-menu">Em alta</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container-explorar">
+        <section class="area-busca">
+            <h2>Descubra novos conteúdos</h2>
+            <div class="input-wrapper">
+                <input type="text" id="input-busca" placeholder="Buscar usuários ou enquetes...">
+                <button id="btn-buscar">Buscar</button>
+            </div>
+        </section>
+
+        <section class="filtros">
+            <button class="filtro-btn ativo" data-tipo="todos">Todos</button>
+            <button class="filtro-btn" data-tipo="usuarios">Usuários</button>
+            <button class="filtro-btn" data-tipo="enquetes">Enquetes</button>
+        </section>
+
+        <section id="lista-resultados">
+            <p class="mensagem-inicial">Digite...</p>
+            </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../JS/ajax.js"></script>
+    <script src="explorar.js"></script>
+</body>
+
+</html>
