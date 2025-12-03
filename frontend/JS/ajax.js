@@ -3,7 +3,7 @@ function verificarLogin() {
     
     if (!token) {
         console.warn('Usuário não autenticado, redirecionando para login');
-        window.location.href = 'http://127.0.0.1:5500/Trabalho-LPW-GrupoF/pagina-registro.html'; 
+        window.location.href = 'http://127.0.0.1:5500/pagina-registro.html'; 
         return false;
     }
     return true;
@@ -14,7 +14,7 @@ function renovarToken() {
     
     if (!refreshToken) {
         console.warn('Refresh token não encontrado, redirecionando para login');
-        window.location.href = 'http://127.0.0.1:5500/Trabalho-LPW-GrupoF/pagina-registro.html';
+        window.location.href = 'http://127.0.0.1:5500/pagina-registro.html';
         return false;
     }
     
@@ -78,7 +78,7 @@ formCadastro.on('submit', function(f) {
                     localStorage.setItem('acess_token', resposta.acess_token)
                     localStorage.setItem('refresh_token', resposta.refresh_token)
 
-                    window.location.href = 'http://127.0.0.1:5500/Trabalho-LPW-GrupoF/index.html'
+                    window.location.href = 'http://127.0.0.1:5500/index.html'
                 },
 
                 error: function(erro) {
@@ -111,7 +111,7 @@ formLogin.on('submit', function(f) {
             localStorage.setItem('acess_token', resposta.acess_token)
             localStorage.setItem('refresh_token', resposta.refresh_token)
 
-            window.location.href = 'http://127.0.0.1:5500/Trabalho-LPW-GrupoF/index.html'
+            window.location.href = 'http://127.0.0.1:5500/index.html'
         },
 
         error: function(erro) {
