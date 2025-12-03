@@ -73,3 +73,143 @@
     padding: 15px 10px;
   }
 }
+
+.container-explorar {
+    max-width: 900px;
+    margin: 90px auto 40px;
+    padding: 20px;
+}
+
+
+.area-busca h2 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.input-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.input-wrapper input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0,123,255,0.4);
+}
+
+#btn-buscar {
+    padding: 12px 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.25s;
+    font-weight: 500;
+}
+
+#btn-buscar:hover {
+    background-color: #005ec4;
+}
+
+
+.filtros {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.filtro-btn {
+    padding: 10px 16px;
+    border: 1px solid #007bff;
+    background: white;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.filtro-btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.filtro-btn.ativo {
+    background-color: #007bff;
+    color: white;
+}
+
+
+#lista-resultados {
+    margin-top: 25px;
+}
+
+.mensagem-inicial {
+    color: #666;
+    font-size: 16px;
+}
+
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-header img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+
+@media (max-width: 650px) {
+    .input-wrapper {
+        flex-direction: column;
+    }
+
+    #btn-buscar {
+        width: 100%;
+    }
+
+    .filtros {
+        flex-wrap: wrap;
+    }
+
+    .filtro-btn {
+        flex: 1;
+        text-align: center;
+    }
+}
