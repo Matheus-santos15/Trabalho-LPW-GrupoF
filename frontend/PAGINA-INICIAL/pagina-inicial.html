@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial - Social</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="pagina-inicial.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav id="navegacao">
+            <ul id="menu-superior">
+                <li><a href="../PERFIL/perfil.html"><span class="abas-menu">Perfil</span></a></li>
+                <li><a href="pagina-inicial.html" class="ativo"><span class="abas-menu">Página Inicial</span></a></li>
+                <li><a href="../EXPLORAR/explorar.html"><span class="abas-menu">Explorar</span></a></li>
+                <li><a href="../EM-ALTA/em-alta.html"><span class="abas-menu">Em alta</span></a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="container-principal">
+        <section class="criar-post">
+            <form id="form-publicar">
+                <h3>Criar Publicação</h3>
+                <input type="text" id="titulo-post" placeholder="Título (opcional)">
+                <textarea id="conteudo-post" placeholder="No que você está pensando?" required></textarea>
+                <input type="text" id="midia-post" placeholder="URL da imagem/mídia (opcional)">
+                <button type="submit">Publicar</button>
+            </form>
+        </section>
+
+        <section id="feed" class="feed-container">
+            <p style="text-align: center; color: #666;">Carregando feed...</p>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../JS/ajax.js"></script> <script src="pagina-inicial.js"></script>
+</body>
+</html>
